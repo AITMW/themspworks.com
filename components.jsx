@@ -65,10 +65,10 @@ function Nav() {
           <a href="#how">How it works</a>
           <a href="#market">Marketplace</a>
           <a href="#team">Team</a>
-          <a href="#insights">Insights</a>
+          <a href="channel-index.html">Insights</a>
         </nav>
         <div className="nav-cta">
-          <a className="btn btn-sm" href="#contact">Partner login</a>
+          <a className="btn btn-sm" href="partner-login.html">Partner login</a>
           <a className="btn btn-sm btn-primary" href="https://calendly.com/amitisrael/meet-with-amit-israel" target="_blank" rel="noopener">Book a channel review <span className="btn-arrow">→</span></a>
         </div>
       </div>

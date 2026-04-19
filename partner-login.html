@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Partner portal · The MSP Works</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;1,8..60,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      font-family: var(--font-text);
+    }
+    .portal-shell {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 80px 24px;
+    }
+    .portal-card {
+      width: 100%;
+      max-width: 580px;
+      background: var(--paper);
+      border: 1px solid var(--rule);
+      padding: 56px 52px;
+      position: relative;
+    }
+    .portal-card::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: var(--ink);
+    }
+    .portal-kicker {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--ink-mute);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 28px;
+    }
+    .portal-kicker::before {
+      content: "";
+      width: 8px; height: 8px;
+      background: var(--sky);
+      border-radius: 50%;
+      box-shadow: 0 0 0 3px color-mix(in oklab, var(--sky) 30%, transparent);
+    }
+    .portal-title {
+      font-family: var(--font-display);
+      font-size: clamp(34px, 4.2vw, 46px);
+      line-height: 1.04;
+      letter-spacing: -0.025em;
+      font-weight: 500;
+      margin: 0 0 20px;
+      color: var(--ink);
+    }
+    .portal-title em {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-weight: 400;
+      color: var(--ink-soft);
+      letter-spacing: -0.015em;
+    }
+    .portal-lede {
+      font-size: 17px;
+      line-height: 1.55;
+      color: var(--ink-soft);
+      margin: 0 0 36px;
+      text-wrap: pretty;
+    }
+    .portal-lede strong {
+      color: var(--ink);
+      font-weight: 600;
+    }
+    .portal-meta {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      border-top: 1px solid var(--rule);
+      border-bottom: 1px solid var(--rule);
+      margin-bottom: 36px;
+    }
+    .portal-meta-cell {
+      padding: 18px 0;
+    }
+    .portal-meta-cell + .portal-meta-cell {
+      padding-left: 24px;
+      border-left: 1px solid var(--rule);
+    }
+    .portal-meta-label {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--ink-mute);
+      margin-bottom: 6px;
+    }
+    .portal-meta-value {
+      font-family: var(--font-display);
+      font-size: 18px;
+      font-weight: 500;
+      letter-spacing: -0.01em;
+      color: var(--ink);
+    }
+    .portal-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .portal-foot {
+      margin-top: 40px;
+      padding-top: 24px;
+      border-top: 1px dashed var(--rule);
+      font-family: var(--font-mono);
+      font-size: 12px;
+      line-height: 1.7;
+      color: var(--ink-mute);
+      letter-spacing: 0.02em;
+    }
+    .portal-foot a {
+      color: var(--ink-soft);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-thickness: 1px;
+    }
+    .portal-foot a:hover {
+      color: var(--ink);
+    }
+    .portal-back {
+      position: fixed;
+      top: 24px;
+      left: 24px;
+      font-family: var(--font-mono);
+      font-size: 12px;
+      letter-spacing: 0.04em;
+      color: var(--ink-soft);
+      text-decoration: none;
+      padding: 8px 14px;
+      border: 1px solid var(--rule);
+      background: var(--bg);
+      transition: all 0.15s ease;
+      z-index: 10;
+    }
+    .portal-back:hover {
+      background: var(--ink);
+      color: var(--bg);
+      border-color: var(--ink);
+    }
+    @media (max-width: 560px) {
+      .portal-card { padding: 40px 28px; }
+      .portal-meta { grid-template-columns: 1fr; }
+      .portal-meta-cell + .portal-meta-cell {
+        padding-left: 0;
+        border-left: none;
+        border-top: 1px solid var(--rule);
+      }
+      .portal-back { top: 16px; left: 16px; }
+    }
+  </style>
+</head>
+<body>
+  <a href="index.html" class="portal-back">← The MSP Works</a>
+
+  <main class="portal-shell">
+    <div class="portal-card" data-screen-label="Partner portal placeholder">
+      <div class="portal-kicker">Partner portal</div>
+
+      <h1 class="portal-title">Quietly under construction, <em>with intent.</em></h1>
+
+      <p class="portal-lede">
+        The MSP Works partner portal is where vetted MSPs and vendors will manage introductions, track pipeline, and run co-sell motions. It opens to our first cohort in <strong>Q3 2026</strong>.
+      </p>
+
+      <div class="portal-meta">
+        <div class="portal-meta-cell">
+          <div class="portal-meta-label">Launch window</div>
+          <div class="portal-meta-value">Q3 2026</div>
+        </div>
+        <div class="portal-meta-cell">
+          <div class="portal-meta-label">First cohort</div>
+          <div class="portal-meta-value">By invitation</div>
+        </div>
+      </div>
+
+      <div class="portal-actions">
+        <a class="btn btn-primary" href="https://calendly.com/amitisrael/meet-with-amit-israel" target="_blank" rel="noopener">
+          Book a channel review <span class="btn-arrow">→</span>
+        </a>
+        <a class="btn" href="index.html#contact">Request early access</a>
+      </div>
+
+      <div class="portal-foot">
+        Already spoken with us? We'll reach out directly when your account is ready.<br>
+        Questions — <a href="mailto:hello@themspworks.com">hello@themspworks.com</a>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
